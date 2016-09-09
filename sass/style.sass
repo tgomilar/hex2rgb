@@ -1,4 +1,4 @@
-@import materialize
+@import materialize/materialize
 
 $base:  #26a69a
 $red:   #f44336
@@ -12,7 +12,6 @@ $blue:  #2980b9
   @extend .teal.lighten-1
 
 .brand-logo span
-  +keyframes(changeColor)
 
 
 body
@@ -85,25 +84,3 @@ footer
   padding: 0
   background: transparent
   border: 1px solid $base
-
-// Animation
-
-=keyframes($name)
-  @-webkit-keyframes #{$name}
-    @content
-  @-moz-keyframes #{$name}
-    @content
-  @-ms-keyframes #{$name}
-    @content
-  @keyframes #{$name}
-    @content
-
-@keyframes changeColor
-  0%
-    color: #fff
-  10%
-    color: #ff0
-  50%
-    color: #0ff
-  100%
-    color: #000
