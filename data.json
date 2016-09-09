@@ -1,0 +1,42 @@
+[{
+  "color": "Red",
+  "p_1": "Red is the color of fire and blood, so it is associated with energy, war, danger, strength, power, determination as well as passion, desire, and love.",
+  "p_2":"Red is a very emotionally intense color. It enhances human metabolism, increases respiration rate, and raises blood pressure. It has very high visibility, which is why stop signs, stoplights, and fire equipment are usually painted red. In heraldry, red is used to indicate courage. It is a color found in many national flags.",
+  "p_3":"Red brings text and images to the foreground. Use it as an accent color to stimulate people to make quick decisions; it is a perfect color for 'Buy Now' or 'Click Here' buttons on Internet banners and websites. In advertising, red is often used to evoke erotic feelings (red lips, red nails, red-light districts, 'Lady in Red', etc). Red is widely used to indicate danger (high voltage signs, traffic lights). This color is also commonly associated with energy, so you can use it when promoting energy drinks, games, cars, items related to sports and high physical activity.",
+  "subcolors":"Light red;Pink;Dark red;Brown;",
+  "subcolors_description":"represents joy, sexuality, passion, sensitivity, and love.; signifies romance, love, and friendship. It denotes feminine qualities and passiveness.;is associated with vigor, willpower, rage, anger, leadership, courage, longing, malice, and wrath.;suggests stability and denotes masculine qualities."
+},
+{
+  "color": "Orange",
+  "p_1": "Orange combines the energy of red and the happiness of yellow. It is associated with joy, sunshine, and the tropics. Orange represents enthusiasm, fascination, happiness, creativity, determination, attraction, success, encouragement, and stimulation.",
+  "p_2":"To the human eye, orange is a very hot color, so it gives the sensation of heat. Nevertheless, orange is not as aggressive as red. Orange increases oxygen supply to the brain, produces an invigorating effect, and stimulates mental activity. It is highly accepted among young people. As a citrus color, orange is associated with healthy food and stimulates appetite. Orange is the color of fall and harvest. In heraldry, orange is symbolic of strength and endurance.",
+  "p_3":"Orange has very high visibility, so you can use it to catch attention and highlight the most important elements of your design. Orange is very effective for promoting food products and toys.",
+  "subcolors":"Dark orange;Red-orange;Gold;",
+  "subcolors_description":"can mean deceit and distrust.; corresponds to desire, sexual passion, pleasure, domination, aggression, and thirst for action.;evokes the feeling of prestige. The meaning of gold is illumination, wisdom, and wealth. Gold often symbolizes high quality."
+},
+{
+  "color": "Yellow",
+  "p_1": "Yellow is the color of sunshine. It's associated with joy, happiness, intellect, and energy.",
+  "p_2":"Yellow produces a warming effect, arouses cheerfulness, stimulates mental activity, and generates muscle energy. Yellow is often associated with food. Bright, pure yellow is an attention getter, which is the reason taxicabs are painted this color. When overused, yellow may have a disturbing effect; it is known that babies cry more in yellow rooms. Yellow is seen before other colors when placed against black; this combination is often used to issue a warning. In heraldry, yellow indicates honor and loyalty. Later the meaning of yellow was connected with cowardice.",
+  "p_3":"Use yellow to evoke pleasant, cheerful feelings. You can choose yellow to promote children's products and items related to leisure. Yellow is very effective for attracting attention, so use it to highlight the most important elements of your design. Men usually perceive yellow as a very lighthearted, 'childish' color, so it is not recommended to use yellow when selling prestigious, expensive products to men – nobody will buy a yellow business suit or a yellow Mercedes. Yellow is an unstable and spontaneous color, so avoid using yellow if you want to suggest stability and safety. Light yellow tends to disappear into white, so it usually needs a dark color to highlight it. Shades of yellow are visually unappealing because they loose cheerfulness and become dingy.",
+  "subcolors":"Dull (dingy) yellow;Light yellow;",
+  "subcolors_description":"represents caution, decay, sickness, and jealousy.;is associated with intellect, freshness, and joy."
+},
+{
+  "color": "Green",
+  "p_1": "Green is the color of nature. It symbolizes growth, harmony, freshness, and fertility. Green has strong emotional correspondence with safety. Dark green is also commonly associated with money.",
+  "p_2":"Green has great healing power. It is the most restful color for the human eye; it can improve vision. Green suggests stability and endurance. Sometimes green denotes lack of experience; for example, a 'greenhorn' is a novice. In heraldry, green indicates growth and hope. Green, as opposed to red, means safety; it is the color of free passage in road traffic.",
+  "p_3":"Use green to indicate safety when advertising drugs and medical products. Green is directly related to nature, so you can use it to promote 'green' products. Dull, darker green is commonly associated with money, the financial world, banking, and Wall Street.",
+  "subcolors":"Dark green;Yellow-green;Olive green",
+  "subcolors_description":"is associated with ambition, greed, and jealousy.;can indicate sickness, cowardice, discord, and jealousy.;is the traditional color of peace."
+},
+{
+  "color": "Blue",
+  "p_1": "Blue is the color of the sky and sea.It is often associated with depth and stability.It symbolizes trust, loyalty, wisdom, confidence, intelligence, faith, truth, and heaven.",
+  "p_2":"Blue is the color of the sky and sea.It is often associated with depth and stability.It symbolizes trust, loyalty, wisdom, confidence, intelligence, faith, truth, and heaven.Blue is considered beneficial to the mind and body.It slows human metabolism and produces a calming effect. Blue is strongly associated with tranquility and calmness.In heraldry, blue is used to symbolize piety and sincerity. You can use blue to promote products and services related to cleanliness(water purification filters, cleaning liquids, vodka), air and sky(airlines, airports, air conditioners), water and sea(sea voyages, mineral water).As opposed to emotionally warm colors like red, orange, and yellow; blue is linked to consciousness and intellect.Use blue to suggest precision when promoting high - tech products.",
+  "p_3":"Avoid using blue when promoting food and cooking, because blue suppresses appetite.When used together with warm colors like yellow or red, blue can create high - impact, vibrant designs; for example, blue - yellow - red is a perfect color scheme for a superhero.",
+  "subcolors":"Dark green;Yellow-green;Olive green",
+  "subcolors_description":"is associated with ambition, greed, and jealousy.;can indicate sickness, cowardice, discord, and jealousy.;is the traditional color of peace."
+}
+
+]
