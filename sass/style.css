@@ -6179,6 +6179,14 @@ footer {
 .card .card-content p {
   margin-bottom: 1em; }
 
+.facebook-bg,
+.facebook-bg:hover {
+  background: #3b5998; }
+
+.twitter-bg,
+.twitter-bg:hover {
+  background: #1da1f2; }
+
 /* label underline focus color */
 .input-field input#rgb_r.valid, .input-field input#rgb_r:focus {
   border-bottom: 1px solid #f44336;

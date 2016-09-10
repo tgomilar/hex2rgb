@@ -2,16 +2,31 @@
 <html>
 
 <head>
-    <!--Import Google Icon Font-->
-    <!-- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+    <title>hex2rgb(a)</title>
+    <meta name="keywords" content="hex, rbg, rgba, hex2rgb, hex2rgba, converter, hex2rgba converter, hex to rgb converter, hex to rgba converter, online, free">
+    <meta name="description" content="hex2rgb(a) web converter. Auto copies rgba() value to clipboard and displays entered color. Might be useful for CSS devs :)">
+    <meta name="author" content="https://tgomilar.github.io">
+    <!--Import Fonts-->
     <script src="https://use.fontawesome.com/9576790a31.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="sass/style.css" media="screen,projection" />
     <link href="js/nouislider.css" rel="stylesheet">
-    <link type="text/javascript" src="data.json">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:url" content="https://tgomilar.github.io/hex2rgb/" />
+    <meta property="og:site_name" content="hex2rgb(a)" />
+    <meta property="og:description" content="hex2rgb(a) web converter. Auto copies rgba() value to clipboard and displays entered color. Might be useful for CSS devs :)." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nytimesbits" />
+    <meta name="twitter:creator" content="@nickbilton" />
+    <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
+    <meta property="og:title" content="A Twitter for My Sister" />
+    <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
+    <meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />
 </head>
 
 <body>
@@ -89,9 +104,9 @@
                                         <input id="rgb" placeholder="" type="text">
                                         <label for="rgb">rgb</label>
                                     </div>
-                                    <div class="col s12">
-                                        <button class="btn waves-effect waves-light red  lighten-1" id="subm" name="action">Generate</button>
-                                        <a class="btn waves-effect waves-light" id="refresh"><i class="fa fa-eraser" aria-hidden="true"></i></a>
+                                    <div class="col s6 offset-s6">
+                                        <a class="btn waves-effect waves-light col m5 left" id="refresh"><i class="fa fa-eraser" aria-hidden="true"></i></a>
+                                        <button class="btn waves-effect waves-light red lighten-1 col m5 right" id="subm" name="action">Generate</button>
                                     </div>
                                 </div>
                             </div>
@@ -106,8 +121,10 @@
                                 <div class="card-title"> Color of the day</div>
                             </div>
                         </div>
-                        <div class="center-align">
-                          <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                        <div class="center-align github">
+                            <a href="https://github.com/tgomilar/hex2rgb" class="grey-text text-darken-4">
+                                <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -119,24 +136,19 @@
             <i class="fa fa-share-alt" aria-hidden="true"></i>
         </a>
         <ul>
-            <li><a class="btn-floating"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-            <li><a class="btn-floating yellow darken-1"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a class="btn-floating blue"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+            <li><a class="btn-floating" href="mailto:?Subject=Check%20out%20this%20HEX%20to%20RGBa%20converter&body=hex2rgb(a)%3A%20https%3A%2F%2Ftgomilar.github.io%2Fhex2rgb%2F" target="_top"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+            <li><a class="btn-floating facebook-bg"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a class="btn-floating twitter-bg"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         </ul>
     </div>
     <footer>
         <div class="footer-copyright center-align">
             <div class="container">
                 <div class="">
-
-
                     <script type="text/javascript">
                         document.write(new Date().getFullYear());
-                    </script> | hex2rgb(a)
-                </div>
-                <div>
-
-                    <!-- <a class="btn"><i class="material-icons">email</i></a> -->
+                    </script>
+                    | hex2rgb(a)
                 </div>
             </div>
         </div>
