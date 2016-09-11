@@ -2,349 +2,195 @@
 <html>
 
 <head>
-    <title>hex2rgb(a)</title>
-    <link rel="icon" href="favicon.ico">
-    <meta name="keywords" content="hex, rbg, rgba, hex2rgb, hex2rgba, converter, hex2rgba converter, hex to rgb converter, hex to rgba converter, online, free">
-    <meta name="description" content="hex2rgb(a) web converter. Auto copies rgba() value to clipboard and displays entered color. Might be useful for CSS devs :)">
-    <meta name="author" content="https://tgomilar.github.io">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="https://tgomilar.github.io/hex2rgb/">
-    <meta property="og:site_name" content="hex2rgb(a)">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@tanjagomilar">
-    <meta name="twitter:creator" content="@tanjagomilar">
-    <meta property="og:url" content="https://tgomilar.github.io/hex2rgb/">
-    <meta property="og:title" content="hex2rgb(a)">
-    <meta property="og:description" content="hex2rgb(a) web converter. Auto copies rgba() value to clipboard and displays entered color. Might be useful for CSS devs :).">
-    <meta property="og:image" content="https://tgomilar.github.io/hex2rgb/img/hex2rgb.png">
-    <!--Import Fonts-->
-    <script src="https://use.fontawesome.com/9576790a31.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-    <!--Import CSS-->
-    <link type="text/css" rel="stylesheet" href="sass/style.css" media="screen,projection">
-    <link href="js/nouislider.css" rel="stylesheet">
+  <title>hex2rgb(a)</title>
+  <link rel="icon" href="favicon.ico">
+  <meta name="keywords" content="hex, rbg, rgba, hex2rgb, hex2rgba, converter, hex2rgba converter, hex to rgb converter, hex to rgba converter, online, free">
+  <meta name="description" content="hex2rgb(a) web converter. Auto copies rgba() value to clipboard and displays entered color. Might be useful for CSS devs :)">
+  <meta name="author" content="https://tgomilar.github.io">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta property="og:url" content="https://tgomilar.github.io/hex2rgb/">
+  <meta property="og:site_name" content="hex2rgb(a)">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@tanjagomilar">
+  <meta name="twitter:creator" content="@tanjagomilar">
+  <meta property="og:url" content="https://tgomilar.github.io/hex2rgb/">
+  <meta property="og:title" content="hex2rgb(a)">
+  <meta property="og:description" content="hex2rgb(a) web converter. Auto copies rgba() value to clipboard and displays entered color. Might be useful for CSS devs :).">
+  <meta property="og:image" content="https://tgomilar.github.io/hex2rgb/img/hex2rgb.png"> -->
+  <!--Import Fonts-->
+  <script src="https://use.fontawesome.com/9576790a31.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+  <!--Import CSS-->
+  <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection">
+  <link href="js/nouislider/nouislider.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper ">
-            <a href="#" class="brand-logo center "><span>hex</span><span>2</span><span>rgb(a)</span></a>
-        </div>
-    </nav>
-    <div class="container">
+
+  <nav>
+    <div class="nav-wrapper ">
+      <a href="/" class="brand-logo center "><span>hex</span><span>2</span><span>rgb(a)</span></a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col s12 ">
+        <blockquote>
+          Let's you convert color value in HEX to RGBA and RGB, prepared for inclusion in CSS, SASS/SCSS, LASS styles.
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
         <div class="row">
-            <div class="col s12 ">
-                <blockquote>
-                    Let's you convert color value in HEX to RGBA and RGB, prepared for inclusion in CSS, SASS/SCSS, LASS styles.
-                </blockquote>
-            </div>
-        </div>
+          <form class="col s12">
 
-        <div class="card">
-            <div class="card-content">
-                <div class="row">
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="col s6">
-                                <blockquote>Paste HEX value</blockquote>
-                                <span class="badge">&nbsp</span>
-                            </div>
-                            <div class="col s6">
-                                <blockquote>or RGB value</blockquote>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="hex" type="text">
-                                <label id="hv" for="hex" data-error="wrong HEX value">
-                                    HEX value (e.g. #f00, #812dd3, ba3, F924A4)
-                                </label>
-                            </div>
-                            <div class="input-field col s2">
-                                <input id="rgb_r" type="number" min="0" max="255" class="validate">
-                                <label for="rgb_r" data-error="wrong red value">Red</label>
-                            </div>
-                            <div class="input-field col s2">
-                                <input id="rgb_g" type="number" min="0" max="255" class="validate">
-                                <label for="rgb_g" data-error="wrong green value">Green</label>
-                            </div>
-                            <div class="input-field col s2">
-                                <input id="rgb_b" type="number" min="0" max="255" class="validate">
-                                <label for="rgb_b" data-error="wrong blue value">Blue</label>
-                            </div>
-                        </div>
-                        </br>
-                        <div class="row">
-                            <div class="col s6">
-                                <blockquote>Opacity</blockquote>
-                                <div class="row">
-                                    <div class="input-field col s2">
-                                        <input placeholder="100" id="opacity" type="number" min="0" max="100">
-                                    </div>
-                                    <div class="col s1 percantage">%</div>
-                                    <div class="col s9">
-                                        <div class="range-field">
-                                            <div type="range" id="opacity_range" min="0" max="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s6">
-                                <blockquote>hex2rgb(a)</blockquote>
-                                <div class="row">
-                                    <div class="input-field col s6">
-                                        <input id="rgba" placeholder="" type="text">
-                                        <label for="rgba" data-error="wrong blue value">rgba</label>
-                                    </div>
-                                    <div class="input-field col s6">
-                                        <input id="rgb" placeholder="" type="text">
-                                        <label for="rgb">rgb</label>
-                                    </div>
-                                    <div class="col s6 offset-s6">
-                                        <a class="btn waves-effect waves-light col m5 left" id="refresh"><i class="fa fa-eraser" aria-hidden="true"></i></a>
-                                        <button class="btn waves-effect waves-light red lighten-1 col m5 right" id="subm" name="action">Generate</button>
-                                    </div>
-                                </div>
-                            </div>
-                    </form>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col s12 m12">
-                        <div id="color-card" class="card lighten-5">
-                            <div class="card-content black-text">
-                                <div class="card-title"> Color of the day</div>
-                            </div>
-                        </div>
-                        <div class="center-align github">
-                            <a href="https://github.com/tgomilar/hex2rgb" class="grey-text text-darken-4">
-                                <i class="fa fa-github fa-3x" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="switch right">
+              <label>
+                hex2rgb(a)
+                <input type="checkbox">
+                <span class="lever"></span>
+                rgb2hex
+              </label>
             </div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col m6 s12">
+                <blockquote>Paste HEX value</blockquote>
+                <span class="badge">&nbsp</span>
+              </div>
+              <div class="col m6 s12">
+                <blockquote>or RGB value</blockquote>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col m6 s12">
+                <input id="hex" type="text">
+                <label id="hv" for="hex" data-error="wrong HEX value">
+                  HEX value (#fa3, #26a69a, ba3, fffde7)
+                </label>
+              </div>
+              <div class="input-field col m2 s4">
+                <input id="rgb_r" type="number" min="0" max="255" class="validate">
+                <label for="rgb_r" data-error="wrong red value">Red</label>
+              </div>
+              <div class="input-field col m2 s4">
+                <input id="rgb_g" type="number" min="0" max="255" class="validate">
+                <label for="rgb_g" data-error="wrong green value">Green</label>
+              </div>
+              <div class="input-field col m2 s4">
+                <input id="rgb_b" type="number" min="0" max="255" class="validate">
+                <label for="rgb_b" data-error="wrong blue value">Blue</label>
+              </div>
+            </div>
+
+          </br>
+          <div class="row">
+
+            <div class="col m6 s12">
+              <blockquote>Opacity</blockquote>
+              <div class="row">
+                <div class="input-field col m2 s3">
+                  <input placeholder="100" id="opacity" type="number" min="0" max="100">
+                </div>
+                <div class="col s1 percantage">%</div>
+                <div class="col m9 s8">
+                  <div class="range-field">
+                    <div type="range" id="opacity_range" min="0" max="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col m6 s12">
+              <blockquote>hex2rgb(a)</blockquote>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="rgba" placeholder="" type="text">
+                  <label for="rgba" data-error="wrong blue value">rgba</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="rgb" placeholder="" type="text">
+                  <label for="rgb">rgb</label>
+                </div>
+                <div class="col s12">
+                  <div class="right">
+                    <a class="btn waves-effect waves-light" id="erase"><i class="fa fa-eraser" aria-hidden="true"></i></a>
+                    <button class="btn waves-effect waves-light red lighten-1" id="subm" name="action">Convert</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </form>
         </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m12">
+          <div id="color-card" class="card lighten-5">
+            <div class="card-content black-text">
+              <div class="card-title"> Color of the day</div>
+            </div>
+          </div>
+          <div class="center-align github">
+            <a href="https://github.com/tgomilar/hex2rgb" class="grey-text text-darken-4">
+              <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="fixed-action-btn horizontal">
-        <a class="btn-floating btn-large red">
-            <i class="fa fa-share-alt" aria-hidden="true"></i>
-        </a>
-        <ul>
-            <li><a class="btn-floating" href="mailto:?Subject=Check%20out%20this%20HEX%20to%20RGBa%20converter&body=hex2rgb(a)%3A%20https%3A%2F%2Ftgomilar.github.io%2Fhex2rgb%2F" target="_top">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </a></li>
-            <li><a class="btn-floating facebook-bg" href="http://www.facebook.com/share.php?" >
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a></li>
-            <li><a class="btn-floating twitter-bg" href="http://twitter.com/share?text=hex2rgb(a)&url=https://tgomilar.github.io/hex2rgb">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a></li>
-        </ul>
+  </div>
+</div>
+
+<div class="fixed-action-btn horizontal">
+  <a class="btn-floating btn-large red">
+    <i class="fa fa-share-alt" aria-hidden="true"></i>
+  </a>
+  <ul>
+    <li>
+      <a class="btn-floating" href="mailto:?Subject=Check%20out%20this%20HEX%20to%20RGBa%20converter&body=hex2rgb(a)%3A%20https%3A%2F%2Ftgomilar.github.io%2Fhex2rgb%2F" target="_top">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li>
+      <a class="btn-floating facebook-bg" href="http://www.facebook.com/share.php?&url=https://tgomilar.github.io/hex2rgb">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li>
+      <a class="btn-floating twitter-bg" href="http://twitter.com/share?text=hex2rgb(a)&url=https://tgomilar.github.io/hex2rgb">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<footer>
+  <div class="footer-copyright center-align">
+    <div class="container">
+        <script type="text/javascript">
+        document.write(new Date().getFullYear());
+        </script>
+        | <span>hex</span><span>2</span><span>rgb(a)</span>
     </div>
-    <footer>
-        <div class="footer-copyright center-align">
-            <div class="container">
-                <div class="">
-                    <script type="text/javascript">
-                        document.write(new Date().getFullYear());
-                    </script>
-                    | hex2rgb(a)
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+  </div>
+</footer>
 
-    <script type="text/javascript" src="js/nouislider.min.js"></script>
-    <script type="text/javascript" src="js/clipboard.min.js"></script>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bin/materialize.min.js"></script>
+<script type="text/javascript" src="js/nouislider/nouislider.min.js"></script>
+<script type="text/javascript" src="js/clipboard.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
 
-    <script type="text/javascript">
-        var hex = "";
-        var opacity = 100;
-        var hex2rgb = "";
-        var hex2rgba = "";
-
-        // Sliders
-        var slider = document.getElementById('opacity_range');
-
-        noUiSlider.create(slider, {
-            start: [null, 100],
-            connect: true,
-            step: 1,
-            range: {
-                'min': 0,
-                'max': 100
-            },
-            format: wNumb({
-                decimals: 0
-            })
-        });
-
-        // Css helpers
-        function setInvalidHexMessage() {
-            $("input#hex").removeClass('valid');
-            $("input#hex").addClass('invalid');
-            return false;
-        }
-
-        function removeInvalidHexMessage() {
-            $("input#hex").removeClass('invalid');
-            return true;
-        }
-
-        function hexToRgb(hex) {
-            // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
-            var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-            hex = hex.replace(shorthandRegex, function(m, r, g, b) {
-                return r + r + g + g + b + b;
-                console.log();
-            });
-
-            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-            return result ? {
-                r: parseInt(result[1], 16),
-                g: parseInt(result[2], 16),
-                b: parseInt(result[3], 16)
-            } : null
-        }
-
-        function validateRgb(rgb_r, rgb_g, rgb_b) {
-            // console.log(rgb_r+ rgb_g+ rgb_b);
-            var rgb_r1 = /^[0-255]/.exec(rgb_r);
-            var rgb_g1 = /^[0-255]/.exec(rgb_g);
-            var rgb_b1 = /^[0-255]/.exec(rgb_b);
-            console.log(rgb_r1 + ' -- ' + rgb_g1 + "aa");
-            if (rgb_r && rgb_g && rgb_b) {
-                return result = {
-                    r: rgb_r,
-                    g: rgb_g,
-                    b: rgb_b
-                }
-
-            } else {
-                return null;
-            }
-            console.log(result + "!");
-        }
-
-        function getHex2rgba() {
-            if (hex != "") {
-                rgb = hexToRgb(hex);
-                opacity = $("input#opacity").val();
-                hex2rgb = "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ")";
-                hex2rgba = "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", " + opacity / 100 + ")";
-            }
-
-            $("input#hex").change(function() {
-                hex = $(this).val();
-                rgb = hexToRgb(hex);
-
-                if (rgb == null) {
-                    setInvalidHexMessage();
-                } else {
-                    hex2rgb = +rgb.r + ", " + rgb.g + ", " + rgb.b;
-                    hex2rgba = "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", " + opacity / 100 + ")";
-                    $('input#rgb').val(hex2rgb);
-                    $('input#rgba').val(hex2rgba);
-
-
-                    var $toastContent = $('<div><div>' + hex2rgba + '</div><div>is copied to clipboard!</div></div>');
-                    var $toastColor = $('<div style="width: 48px; height: 48px; border-radius: 50%; margin:auto; background:' + hex2rgba + ';"></div>');
-                    Materialize.toast($toastColor, 10000, 'rounded');
-                    Materialize.toast($toastContent, 10000);
-                    clipboard.copy(hex2rgba);
-                    removeInvalidHexMessage();
-
-                    // break;
-                }
-            });
-        }
-
-        function getOpacity() {
-            $("input#opacity").change(function() {
-                opacity = $(this).val();
-                slider.noUiSlider.set([null, opacity]);
-                getHex2rgba();
-            });
-            slider.noUiSlider.on('update', function(values, handle) {
-                opacity = values[1];
-                $("input#opacity").val(opacity);
-            });
-            return opacity;
-        }
-
-        $('#subm').click(function(e) {
-            e.preventDefault();
-            var hex_rgb = hexToRgb(hex);
-            var rgb = validateRgb($("#rgb_r").val(), $("#rgb_g").val(), $("#rgb_b").val());
-
-            if (hex_rgb != null) {
-                var hex2rgb = hex_rgb.r + ", " + hex_rgb.g + ", " + hex_rgb.b;
-                var hex2rgba = "rgba(" + hex_rgb.r + ", " + hex_rgb.g + ", " + hex_rgb.b + ", " + opacity / 100 + ")";
-                $('input#rgb').val(hex2rgb);
-                $('input#rgba').val(hex2rgba);
-                var $toastContent = $('<div><div>' + hex2rgba + '</div><div>is copied to clipboard!</div></div>');
-                var $toastColor = $('<div style="width: 48px; height: 48px; border-radius: 50%; margin:auto; background:' + hex2rgba + ';"></div>');
-                Materialize.toast($toastColor, 10000, 'rounded');
-                Materialize.toast($toastContent, 10000);
-                clipboard.copy(hex2rgba);
-                removeInvalidHexMessage();
-
-                return true;
-
-
-            } else {
-                if (rgb != null) {
-                    var hex2rgb = rgb.r + ", " + rgb.g + ", " + rgb.b;
-                    var hex2rgba = "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", " + opacity / 100 + ")";
-                    $('input#rgb').val(hex2rgb);
-                    $('input#rgba').val(hex2rgba);
-                    var $toastContent = $('<div><div>' + hex2rgba + '</div><div>is copied to clipboard!</div></div>');
-                    var $toastColor = $('<div style="width: 48px; height: 48px; border-radius: 50%; margin:auto; background:' + hex2rgba + ';"></div>');
-                    Materialize.toast($toastColor, 10000, 'rounded');
-                    Materialize.toast($toastContent, 10000);
-                    clipboard.copy(hex2rgba);
-                    removeInvalidHexMessage();
-                    return true;
-                } else {
-                    return false;
-                }
-                return false;
-            }
-
-        });
-
-        function refresh() {
-            $('#refresh').click(function() {
-                $('*:input').val('');
-            });
-        }
-
-        $(document).ready(function() {
-            opacity = getOpacity();
-            getHex2rgba();
-            refresh();
-
-
-        });
-
-        var rndNumber = Math.floor(Math.random() * 5);
-        $.getJSON("data.json", function(json) {
-
-            var color = json[rndNumber].color.toLowerCase();
-            $('#color-card').addClass(color);
-            $('#color-card .card-content').append('<h5>' + json[rndNumber].color + '</h5>');
-            $('#color-card .card-content').append('<p>' + json[rndNumber].p_1 + '</p>');
-            $('#color-card .card-content').append('<p>' + json[rndNumber].p_2 + '</p>');
-            $('#color-card .card-content').append('<p>' + json[rndNumber].p_3 + '</p>');
-            console.log(json[rndNumber].color); // this will show the info it in firebug console
-        });
-    </script>
 </body>
-
 </html>
