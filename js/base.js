@@ -112,7 +112,7 @@ function initToast(value, rgb2hex) {
     var toastColor = $('<div style="width: 48px; height: 48px; border-radius: 50%; margin:auto; background:' + hex2rgba + ';"></div>');
     Materialize.toast(toastColor, 10000, 'rounded');
     Materialize.toast(toastContent, 10000);
-    clipboard.copy(hex2rgba);
+    clipboard.copy(value.g);
   }
 }
 
