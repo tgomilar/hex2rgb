@@ -101,7 +101,7 @@ function initToast(value, rgb2hex) {
     var toastColor = $('<div style="width: 48px; height: 48px; border-radius: 50%; margin:auto; background:' + value.result + ';"></div>');
     Materialize.toast(toastColor, 10000, 'rounded');
     Materialize.toast(toastContent, 10000);
-    clipboard.copy(value.result);
+    clipboard.copy(value.result+'');
     $('input#hex').val(value.result).focus();
   } else {
     var hex2rgb = value.r + ", " + value.g + ", " + value.b;
