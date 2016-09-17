@@ -38,7 +38,6 @@ function hexToRgb(hex) {
   var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, function(m, r, g, b) {
     return r + r + g + g + b + b;
-    console.log();
   });
 
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -95,48 +94,63 @@ function getOpacity() {
   return opacity;
 }
 
-$('#subm').click(function(e) {
-  e.preventDefault();
-  var hex_rgb = hexToRgb(hex);
-  var rgb = validateRgb($("#rgb_r").val(), $("#rgb_g").val(), $("#rgb_b").val());
-
-  if (hex_rgb != null) {
-    $('.toast').fadeOut();
-    var hex2rgb = hex_rgb.r + ", " + hex_rgb.g + ", " + hex_rgb.b;
-    var hex2rgba = "rgba(" + hex_rgb.r + ", " + hex_rgb.g + ", " + hex_rgb.b + ", " + opacity / 100 + ")";
+function initToast(value, rgb2hex) {
+  $('.toast').fadeOut();
+  if(rgb2hex) {
+    var toastContent = $('<div><div>' + value.result + '</div><div>is copied to clipboard!</div></div>');
+    var toastColor = $('<div style="width: 48px; height: 48px; border-radius: 50%; margin:auto; background:' + value.result + ';"></div>');
+    Materialize.toast(toastColor, 10000, 'rounded');
+    Materialize.toast(toastContent, 10000);
+    clipboard.copy(hex2rgba);
+    $('input#hex').val(value.result).focus();
+  } else {
+    var hex2rgb = value.r + ", " + value.g + ", " + value.b;
+    var hex2rgba = "rgba(" + value.r + ", " + value.g + ", " + value.b + ", " + opacity / 100 + ")";
     $('input#rgb').val(hex2rgb);
     $('input#rgba').val(hex2rgba);
     var toastContent = $('<div><div>' + hex2rgba + '</div><div>is copied to clipboard!</div></div>');
     var toastColor = $('<div style="width: 48px; height: 48px; border-radius: 50%; margin:auto; background:' + hex2rgba + ';"></div>');
     Materialize.toast(toastColor, 10000, 'rounded');
     Materialize.toast(toastContent, 10000);
-    clipboard.copy(hex2rgba+'aaa');
+    clipboard.copy(hex2rgba);
+  }
+}
+
+$('#subm').click(function(e) {
+  e.preventDefault();
+  var rgb = validateRgb($("#rgb_r").val(), $("#rgb_g").val(), $("#rgb_b").val());
+  if($('input[type=checkbox]').is(':checked')) {
+    initToast(rgb2hex(rgb), 1);
     removeInvalidHexMessage();
-
-    return true;
-
-
   } else {
-    if (rgb != null) {
-      $('.toast').fadeOut();
-      var hex2rgb = rgb.r + ", " + rgb.g + ", " + rgb.b;
-      var hex2rgba = "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", " + opacity / 100 + ")";
-      $('input#rgb').val(hex2rgb);
-      $('input#rgba').val(hex2rgba);
-      var toastContent = $('<div><div>' + hex2rgba + '</div><div>is copied to clipboard!</div></div>');
-      var toastColor = $('<div style="width: 48px; height: 48px; border-radius: 50%; margin:auto; background:' + hex2rgba + ';"></div>');
-      Materialize.toast(toastColor, 10000, 'rounded');
-      Materialize.toast(toastContent, 10000);
-      clipboard.copy(hex2rgba);
+    var hex_rgb = hexToRgb(hex);
+    if (hex_rgb != null) {
+      initToast(hex_rgb);
       removeInvalidHexMessage();
       return true;
     } else {
+      if (rgb != null) {
+        initToast(rgb);
+        removeInvalidHexMessage();
+        return true;
+      } else {
+        return false;
+      }
       return false;
     }
-    return false;
   }
-
 });
+
+function rgb2hex(rgb){
+  var result = "#" +
+  ("0" + parseInt(rgb.r, 10). toString(16)). slice(-2) +
+  ("0" + parseInt(rgb.g, 10). toString(16)). slice(-2) +
+  ("0" + parseInt(rgb.b, 10). toString(16)). slice(-2);
+
+  return (rgb) ? {
+    result
+  }: null
+}
 
 function erase() {
   $('#erase').click(function() {
