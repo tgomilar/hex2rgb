@@ -49,11 +49,12 @@ function hexToRgb(hex) {
 }
 
 function validateRgb(rgb_r, rgb_g, rgb_b) {
-  var rgb_r1 = /^[0-255]/.exec(rgb_r);
-  var rgb_g1 = /^[0-255]/.exec(rgb_g);
-  var rgb_b1 = /^[0-255]/.exec(rgb_b);
+  var temp_rgb_r = (0 < rgb_r && rgb_r < 256);
+  var temp_rgb_g = (0 < rgb_g && rgb_g < 256);
+  var temp_rgb_b = (0 < rgb_b && rgb_b < 256);
 
-  var result = (rgb_r && rgb_g && rgb_b);
+  var result = (temp_rgb_r && temp_rgb_g && temp_rgb_b);
+
   return result ? {
     r: rgb_r,
     g: rgb_g,
@@ -118,18 +119,27 @@ function initToast(value, rgb2hex) {
 
 $('#subm').click(function(e) {
   e.preventDefault();
+  $('.switch').tooltip('remove');
   var rgb = validateRgb($("#rgb_r").val(), $("#rgb_g").val(), $("#rgb_b").val());
   if($('input[type=checkbox]').is(':checked')) {
-    initToast(rgb2hex(rgb), 1);
-    removeInvalidHexMessage();
+    if(rgb) { console.log(rgb);
+      initToast(rgb2hex(rgb), 1);
+      removeInvalidHexMessage();
+    } else {
+      $('.switch').tooltip({delay: 50});
+      $('.switch').mouseover();
+    }
   } else {
     var hex_rgb = hexToRgb(hex);
+      console.log(rgb);
     if (hex_rgb != null) {
       initToast(hex_rgb);
+
       removeInvalidHexMessage();
       return true;
     } else {
       if (rgb != null) {
+        console.log(rgb);
         initToast(rgb);
         removeInvalidHexMessage();
         return true;
@@ -155,6 +165,8 @@ function rgb2hex(rgb){
 function erase() {
   $('#erase').click(function() {
     $('*:input').val('');
+    removeInvalidHexMessage();
+    $('.switch').tooltip('remove');
     opacity = 100;
   });
 }
