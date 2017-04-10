@@ -3,6 +3,6 @@ Is a simple web app that **converts color value** from HEX to RGB(a) and vice ve
 
 URL: https://tgomilar.github.io/hex2rgb/
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![Alt text](/img/hex2rgb.png?raw=true "hex2rgb(a)")
 
 i :heart: colors! :art:
