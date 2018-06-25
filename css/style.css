@@ -6156,18 +6156,32 @@ main {
   flex: 1 0 auto;
   margin-top: 50px; }
 
-nav .brand-logo {
-  font-family: 'Shrikhand', cursive;
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: -1px 1px 1px #004d40;
-  font-size: 2.2rem;
-  letter-spacing: 3px; }
-  nav .brand-logo span:nth-child(2) {
-    color: #EF5350;
-    text-shadow: -1px 1px 1px #b71c1c;
-    text-shadow: -1px 0 #b71c1c, 0 1px #b71c1c, 1px 0 #b71c1c, 0 -1px #b71c1c;
-    font-size: 3.5rem;
-    margin: 0 0.5rem; }
+nav {
+  height: 90px; }
+  nav .brand-logo {
+    top: 10px;
+    font-family: 'Shrikhand', cursive;
+    color: #004d40;
+    text-shadow: -1px 1px 1px #004d40;
+    font-size: 2.2rem;
+    letter-spacing: 1px; }
+    nav .brand-logo span:nth-child(2),
+    nav .brand-logo span:nth-child(4),
+    nav .brand-logo span:nth-child(6) {
+      color: #EF5350;
+      text-shadow: -1px 1px 1px #b71c1c;
+      text-shadow: -1px 0 #b71c1c, 0 1px #b71c1c, 1px 0 #b71c1c, 0 -1px #b71c1c;
+      font-size: 3.5rem;
+      margin: 0 0.05rem; }
+    nav .brand-logo span:nth-child(4) {
+      margin: 0 1.5rem;
+      font-size: 5rem; }
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo.center {
+    transform: translateX(-50%) scale(0.5); } }
+.container {
+  max-width: 1080px; }
 
 footer {
   margin-bottom: 2em;
@@ -6199,6 +6213,14 @@ footer {
 
 .switch {
   margin-bottom: 2rem; }
+
+.switch label input[type=checkbox] + .lever:after {
+  background-color: #26a69a; }
+.switch label input[type=checkbox] + .lever:before {
+  background-color: rgba(38, 166, 154, 0.15); }
+
+.switch label input[type=checkbox] + .lever {
+  background-color: #84c7c1; }
 
 /* label underline focus color */
 .input-field input#rgb_r.valid, .input-field input#rgb_r:focus {
@@ -6246,4 +6268,5 @@ footer {
 
 .mt-4 {
   margin-top: 30px; }
+
 /*# sourceMappingURL=style.css.map */

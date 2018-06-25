@@ -2,22 +2,22 @@
 <html>
 
 <head>
-    <title>hex2rgb(a) | color converter</title>
+    <title>hex2rgb(a) and hex2hsl(a) | color converter</title>
     <meta charset="utf-8">
     <meta content="index, follow" name="robots">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords"
-          content="hex, rbg, rgba, hex2rgb, github, tgomilar, hex2rgba, converter, hex2rgba converter, hex to rgb converter,hex to rgb, hex to rgba converter, online, free">
+          content="hex, hex to hsl, hex 2 hsl, hex2hsl, hex2hsla, hex to hsla, rgb2hsl, rgb to hsl, rgba to hsla, hex to hsl converter, rbg, rgba, hex2rgb, github, tgomilar, hex2rgba, converter, hex2rgba converter, hex to rgb converter,hex to rgb, hex to rgba converter, online, free">
     <meta name="description"
-          content="hex2rgb(a) color converter. Auto copies rgba() value to clipboard and displays entered color. Might be useful to designers, CSS or front-end developers :)">
+          content="hex2rgb(a) and hex2hsl(a) color converter. Auto copies rgba() or HEX value to clipboard and displays entered color.">
     <meta property="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://tgomilar.github.io/hex2rgb/img/hex2rgb.png">
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">
     <meta property="og:title" content="hex2rgb(a) color converter">
     <meta property="og:description"
-          content="Might be useful to designers, CSS or front-end developers. #hex2rgb #colors #web">
+          content="Might be useful to designers, front-end developers... #hex2rgb #colors #web">
     <meta property="og:url" content="https://tgomilar.github.io/hex2rgb/">
     <meta property="og:site_name" content="hex2rgb(a) color converter">
     <meta property="og:image" content="https://tgomilar.github.io/hex2rgb/img/hex2rgb.png">
@@ -35,7 +35,15 @@
 <!--nav-->
 <nav>
     <div class="nav-wrapper ">
-        <a href="/hex2rgb/" class="brand-logo center "><span>hex</span><span>2</span><span>rgb(a)</span></a>
+        <a href="/hex2rgb/" class="brand-logo center ">
+            <span>hex</span>
+            <span>2</span>
+            <span>rgb(a)</span>
+            <span>&&</span>
+            <span>hex</span>
+            <span>2</span>
+            <span>hsl(a)</span>
+        </a>
     </div>
 </nav>
 <!--nav-->
@@ -46,7 +54,8 @@
     <div class="row mt-4">
         <div class="col s12 ">
             <blockquote>
-                Convert color from HEX to RGB(a) or RGB(a) to HEX value. Converted value is copied to clipboard
+                Convert color from HEX to RGB(a) and HSL(a) or RGB(a) to HEX and HSL(a) value.<br>
+                Converted value is copied to clipboard
                 and prepared for pasting into CSS, SASS/SCSS, LASS files.
             </blockquote>
             <blockquote>
@@ -59,18 +68,20 @@
 
     <!--card-->
     <div class="card">
-        <div class="card-content">
+        <div class="card-content small">
             <!--row-->
             <div class="row">
                 <!--form-->
                 <form class="col s12">
                     <!--switch-->
-                    <div class="switch right" data-position="bottom" data-delay="50" data-tooltip="Wht's your choice?">
+                    <div class="switch right tooltipped" data-position="bottom" data-delay="50" data-tooltip="Wht's your choice?">
                         <label>
-                            hex2rgb(a)
+                            hex2rgb(a) and
+                            hex2hsl(a)
                             <input type="checkbox">
                             <span class="lever"></span>
-                            rgb2hex
+                            rgb2hex and
+                            rgb2hsl(a)
                         </label>
                     </div>
                     <!--/switch-->
@@ -78,11 +89,11 @@
 
                     <div class="row">
                         <div class="col m6 s12">
-                            <blockquote>Paste HEX value</blockquote>
+                            <blockquote><h5>Paste HEX value</h5></blockquote>
                             <span class="badge">&nbsp</span>
                         </div>
                         <div class="col m6 s12">
-                            <blockquote>or RGB value</blockquote>
+                            <blockquote><h5>or RGB value</h5></blockquote>
                         </div>
                     </div>
 
@@ -112,7 +123,7 @@
                     <!--row-->
                     <div class="row">
                         <div class="col m6 s12">
-                            <blockquote>Opacity</blockquote>
+                            <blockquote><h5>Opacity</h5></blockquote>
                             <div class="row">
                                 <div class="input-field col m2 s3">
                                     <input placeholder="100" id="opacity" type="number" min="0" max="100">
@@ -126,7 +137,7 @@
                             </div>
                         </div>
                         <div class="col m6 s12">
-                            <blockquote>hex2rgb(a)</blockquote>
+                            <blockquote><h5>hex2<b>rgb</b>(a)</h5></blockquote>
                             <div class="row">
                                 <div class="input-field col s6">
                                     <input id="rgba" placeholder="" type="text">
@@ -135,6 +146,17 @@
                                 <div class="input-field col s6">
                                     <input id="rgb" placeholder="" type="text">
                                     <label for="rgb">rgb</label>
+                                </div>
+                            </div>
+                            <blockquote><h5>hex2<b>hsl</b>(a)</h5></blockquote>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="hsla" placeholder="" type="text">
+                                    <label for="hsla" data-error="wrong blue value">hsla</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="hsl" placeholder="" type="text">
+                                    <label for="hsl">hsl</label>
                                 </div>
                                 <div class="col s12">
                                     <div class="right">
